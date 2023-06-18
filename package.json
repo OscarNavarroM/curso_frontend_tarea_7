@@ -1,0 +1,23 @@
+{
+  "name": "curso_frontend_tarea_7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css:watch": "sass --watch src/assets/styles/sass/main.scss src/assets/styles/css/main.css",
+    "css:build": "sass src/assets/styles/sass/main.scss src/assets/styles/css/main.css",
+    "prestart": "npm run css:build",
+    "start": "http-server -a localhost -p 3000 src",
+    "dev": "concurrently \"npm run css:watch\" \"npm start\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "sass": "^1.63.4"
+  }
+}

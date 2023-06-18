@@ -1,0 +1,36 @@
+@use "../variables/variables" as var;
+.content {
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+  padding-inline: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var.$content-bg-color;
+}
+.content .content-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1.5rem;
+  row-gap: 1rem;
+}
+.content .card {
+  padding-top: 1rem;
+  padding-inline: 1rem;
+}
+.content .card-img-top {
+  flex-grow: 100;
+}
+.content p {
+  text-align: center;
+}
+@media screen and (min-width: var.$medium-breakpoint) and (max-width: var.$large-breakpoint) {
+  .content .content-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: var.$large-breakpoint) {
+  .content .content-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
